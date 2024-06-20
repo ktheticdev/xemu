@@ -29,7 +29,7 @@ jobs:
       run: |
         git config user.name "nobody"
         git config user.email "nobody@nowhere"
-        VERSION=$(git describe --tags --match 'v*' --abbrev=0 | xargs ./scripts/increment-semver.py)
+        VERSION=0.3
         git tag -a $VERSION -m $VERSION
         echo "Generated new release version: $VERSION"
     # GitHub treats the new tag as lightweight, so older tags will shadow the
